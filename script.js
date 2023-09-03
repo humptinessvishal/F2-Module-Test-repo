@@ -59,7 +59,6 @@ function displayData(weather) {
     const time = secondsToTimeZoneString(weather.timezone);
     const pressure = Math.round((weather.main.pressure) / 1013.25);
     const direction = degreeToDirection(weather.wind.deg);
-    // uv index
     const temp = Math.round(weather.main.temp - 273.15);
 
     detail.innerHTML = `<div>Location: ${locationName}</div>
@@ -68,7 +67,7 @@ function displayData(weather) {
                         <div>Time Zone: GMT ${time.sign}${time.hours}:${time.minutes}</div>
                         <div>Pressure: ${pressure}atm</div>
                         <div>Wind Direction: ${direction}</div>
-                        <div></div>
+                        <div>UV Index : 500</div>
                         <div>Feels like: ${temp}° C</div>
                        `
 }
